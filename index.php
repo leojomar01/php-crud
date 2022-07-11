@@ -62,14 +62,10 @@
                         <form action="./inc/update.php" method="post">
                             <input type="hidden" name="id" id="id" value="<?php echo $row['id'] ?>">
                             <input type="submit" value="Update" name="update">
-                        </form>
-                        <form action="./inc/delete.php" method="post">
-                            <input type="hidden" name="id" id="id" value="<?php echo $row['id'] ?>">
-                            <input type="submit" value="Delete" name="delete">
+                            <input type="submit" value="Delete" name="delete" onclick="return confirm('Are you sure you want to delete this record?')">
                         </form>
                     </td>
                 </tr>
-            
         <?php 
             }
         ?>
