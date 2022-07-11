@@ -49,7 +49,7 @@
         <input type="hidden" name="id" id="id" value="<?php echo $row['id'] ?>">
         <input type="text" name="first_name" placeholder="Enter First Name" required value="<?php echo $row['first_name'] ?>">
         <input type="text" name="last_name" placeholder="Enter Last Name" required value="<?php echo $row['last_name'] ?>">
-        <input type="email" name="email" placeholder="Enter email" required value="<?php echo $row['email'] ?>">
+        <input type="email" name="email" placeholder="Enter email" required readonly value="<?php echo $row['email'] ?>">
         <select name="gender" id="gender">
             <option value="">Select Gender</option>
             <option value="Male" <?php echo ($row['gender']=="Male")? "selected":null; ?>>Male</option>
