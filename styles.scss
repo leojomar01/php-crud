@@ -1,0 +1,18 @@
+$btnColor:blue;
+$btnBgColor:white;
+
+
+
+.btn{
+    border: 1px solid $btnColor;
+    background-color: $btnBgColor;
+    color: $btnColor;
+    border-radius: .2rem;
+    padding: .3rem;
+    transition: .3s;
+    &:hover{
+        background-color: $btnColor;
+        color: $btnBgColor;
+        cursor: pointer;
+    }
+}

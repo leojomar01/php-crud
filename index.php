@@ -63,7 +63,10 @@
                             <input type="hidden" name="id" id="id" value="<?php echo $row['id'] ?>">
                             <input type="submit" value="Update" name="update">
                         </form>
-                        <button>Delete</button>
+                        <form action="./inc/delete.php" method="post">
+                            <input type="hidden" name="id" id="id" value="<?php echo $row['id'] ?>">
+                            <input type="submit" value="Delete" name="delete">
+                        </form>
                     </td>
                 </tr>
             
