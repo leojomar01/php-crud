@@ -1,5 +1,6 @@
 <?php
     require("../connection/database.php");
+    require('../session.php');
     
     if(isset($_POST['update'])){
         $id = $_POST['id'];
@@ -43,6 +44,9 @@
         echo "<script> alert('Sucessfully Updated')</script>";
         echo "<script>window.location.href = '../index.php'</script>";
     }
+
+
+   
 ?>
 
 

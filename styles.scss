@@ -1,18 +1,11 @@
-$btnColor:blue;
-$btnBgColor:white;
+.container{
+    display: flex;
+    flex-direction: column;
 
 
 
-.btn{
-    border: 1px solid $btnColor;
-    background-color: $btnBgColor;
-    color: $btnColor;
-    border-radius: .2rem;
-    padding: .3rem;
-    transition: .3s;
-    &:hover{
-        background-color: $btnColor;
-        color: $btnBgColor;
-        cursor: pointer;
+    table,th,td{
+        border: 1px solid black;
     }
-}
+}   
+
