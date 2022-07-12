@@ -14,7 +14,8 @@
         c.name AS gender 
         FROM register AS a 
         JOIN reference_code AS b ON a.user_role = b.id 
-        JOIN reference_code AS c ON a.gender = c.id ORDER BY $columnName $orderBy";
+        JOIN reference_code AS c ON a.gender = c.id 
+        ORDER BY $columnName $orderBy";
     }
     else{
         // $query_retrieve = "SELECT * FROM register INNER JOIN reference_code ON reference_code.id = register.gender";

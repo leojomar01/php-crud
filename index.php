@@ -1,5 +1,34 @@
 <?php require('./inc/retreive.php') ;
     require('./session.php');
+
+
+    class Employee{
+        var $title;
+        var $salary;
+        
+        
+        function setTitle($title){
+            $this->title = $title;
+        }
+
+        function getTitle(){
+            echo $this->title;
+        }
+
+        function setSalary($salary){
+            $this->salary = $salary;
+        }
+
+        function getSalary(){
+            echo $this->salary;
+        }
+    }
+
+    $frontend = new Employee();
+    $frontend->setTitle("Junior Dev");
+    $frontend->setSalary(30000);
+
+
 ?>
 
 
@@ -43,9 +72,6 @@
         <input class="form-label" type="text" name="last_name" placeholder="Enter Last Name" required>
         <input class="form-label" type="email" name="email" placeholder="Enter email" required>
         <input class="form-label" type="password" name="password" placeholder="Enter Password" required>
-
-
-
         <select name="gender" id="gender">
             <option value="">Select Gender</option>
             <?php
@@ -95,6 +121,8 @@
             <th>Email <a href="?columnName=email"><i class="fa fa-fw fa-sort"></i></a></th>
             <th>Gender <a href="?columnName=gender"><i class="fa fa-fw fa-sort"></i></a></th>
             <th>User Role <a href="?columnName=user_role"><i class="fa fa-fw fa-sort"></i></a></th>
+            <th>Job<a href="?columnName=user_role"><i class="fa fa-fw fa-sort"></i></a></th>
+            <th>Salary<a href="?columnName=user_role"><i class="fa fa-fw fa-sort"></i></a></th>
             <th>Action</th>
            
         </tr>
@@ -110,6 +138,8 @@
                     <td><?php echo $row['email']?></td>
                     <td><?php echo $row['gender']?></td>
                     <td><?php echo $row['user_role']?></td>
+                    <td><?php echo $frontend->getTitle() ?></td>
+                    <td><?php echo $frontend->getSalary() ?></td>
                     <td>
                         <form action="./inc/update.php" method="post">
                             <input type="hidden" name="id" id="id" value="<?php echo $row['id'] ?>">
